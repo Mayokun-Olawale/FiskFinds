@@ -2,3 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+input[type="text"], input[type="number"], select, textarea{
+  @apply w-full border p-2 rounded;
+}
+ label{
+  @apply text-xs text-gray-600 font-bold uppercase block mt-6 mb-1;
+}
+label.upload-btn input[type="file"]{
+  @apply hidden ;
+}
+label.radio-btn {
+  @apply rounded-md py-1 px-1 flex items-center gap-2 my-0;
+}
+input[type="radio"]:checked + label.radio-btn {
+  @apply bg-blue-100; 
+}
+label.radio-btn svg{
+  @apply h-7;
+}
+label.radio-btn{
+  @apply normal-case;
+}
